@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="chart">
+    </div>
+    <!-- <script type="text/javascript" src="Viz.js">
+    </script> -->
+    <script type="text/javascript">
+      // new VIZ.Column(['Sales', 4], ['Marketing', 15], ['Supplies', 14], ['Maintenance', 76])
+      // .render('chart', 640, 480);
+
+      let script = document.createElement('script');
+      script.src = 'Viz.js';
+      script.onload = () => {
+        console.log('Script has loaded');
+        let col = new VIZ.Column(
+          ['Sales', Math.round(Math.random() * 100)],
+          ['Marketing', Math.round(Math.random() * 100)],
+          ['Supplies', Math.round(Math.random() * 100)],
+          ['Maintenance', Math.round(Math.random() * 100)],
+        )
+        .render('chart', 640, 480);
+        console.log(col);
+      }
+      document.body.append(script);
+    </script>
+  </body>
+</html>
